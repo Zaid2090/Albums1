@@ -1,0 +1,28 @@
+{
+  "version": "UNSW_EGCP_grounded_fast_path_v1",
+  "dataset": "UNSW-NB15",
+  "model_sha256": "d0122bb1501c17d55934b9ed5484b03f03879af8fead19007e6fb428c70d2f05",
+  "onnx_sha256": "ef468176f0ed38c970f58a593826c6d2cc8fd038d51125cedc56044d433327ad",
+  "renderer_sha256": "5dc5fd95b204fc5547e77aaee1125a0969d7cbfab5712fa9ec18f862ab8cd5c7",
+  "feature_count": 39,
+  "threshold": 0.5,
+  "cohort": "122 frozen-detector predicted-Attack events; labels not used for timing selection",
+  "events": 122,
+  "rounds": 10,
+  "calls": 1220,
+  "quality": {"strict_valid_rate":1.0,"valid_calls":1220,"calls":1220,"events":122,"rounds":10},
+  "validator_mutation_stress": {"mutations":732,"accepted_invalid":0,"rejection_rate":1.0},
+  "latency": {
+    "prepare_ms":{"mean_ms":0.007267558196721311,"p50_ms":0.00693,"p95_ms":0.009030499999999999,"p99_ms":0.015844799999999996,"max_ms":0.027551},
+    "detector_ms":{"mean_ms":0.27081147049180326,"p50_ms":0.26507800000000004,"p95_ms":0.3482475,"p99_ms":0.3766473899999997,"max_ms":0.458014},
+    "shap_ms":{"mean_ms":245.3657353754098,"p50_ms":244.2024325,"p95_ms":258.48161435,"p99_ms":268.59385291,"max_ms":319.308109},
+    "selection_ms":{"mean_ms":0.036723704918032785,"p50_ms":0.035451,"p95_ms":0.045584,"p99_ms":0.05769439999999999,"max_ms":0.083893},
+    "renderer_ms":{"mean_ms":0.013861799180327868,"p50_ms":0.013305500000000001,"p95_ms":0.017190999999999998,"p99_ms":0.03131199999999994,"max_ms":0.042872},
+    "validator_ms":{"mean_ms":0.06415399836065573,"p50_ms":0.0619115,"p95_ms":0.0795385,"p99_ms":0.0866497,"max_ms":0.101002},
+    "end_to_end_ms":{"mean_ms":245.75855390655738,"p50_ms":244.577823,"p95_ms":258.9248934,"p99_ms":268.96671932,"max_ms":319.881336}
+  },
+  "runtime": {"python":"3.12.3","numpy":"2.1.3","pandas":"2.2.3","shap":"0.52.0","onnxruntime":"1.29.0","provider":"CPUExecutionProvider","execution_mode":"ORT_SEQUENTIAL","intra_op_threads":1,"inter_op_threads":1},
+  "test_labels_used_for_timing_cohort": false,
+  "test_labels_used_for_model_training_or_selection": false,
+  "interpretation_boundary": "Triggered post-flow grounded explanation path. Excludes packet capture, flow formation, transport, queueing, logging, and generative fallback."
+}
