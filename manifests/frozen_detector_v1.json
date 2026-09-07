@@ -1,0 +1,25 @@
+{
+  "version": "frozen_detector_v1",
+  "dataset": "UNSW-NB15",
+  "selected_contract": "NUMERIC_ONLY_39",
+  "feature_count": 39,
+  "canonical_seed": 20260907,
+  "threshold": 0.5,
+  "rf_params": {
+    "n_estimators": 150,
+    "max_depth": 20,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "criterion": "gini",
+    "bootstrap": true,
+    "class_weight": "balanced_subsample",
+    "n_jobs": -1
+  },
+  "training_rows": 175341,
+  "training_class_counts": {"0": 56000, "1": 119341},
+  "training_fit_seconds": 11.786235652980395,
+  "model_file": "unsw_rf_numeric_only_39_frozen_seed20260907.joblib",
+  "model_sha256": "d0122bb1501c17d55934b9ed5484b03f03879af8fead19007e6fb428c70d2f05",
+  "frozen_before_test_evaluation": true,
+  "test_labels_used_for_training_or_selection": false
+}
