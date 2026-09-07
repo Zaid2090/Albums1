@@ -1,0 +1,15 @@
+{
+  "version": "UNSW_EGCP_explanation_acceleration_selection_v1",
+  "partition": "Validation only",
+  "purpose": "Select an explanation acceleration candidate before confirmatory Test use.",
+  "candidates": {
+    "approximate_treeexplainer": {"p95_ms":0.11037399999999996,"top2_overlap":0.21,"top5_overlap":0.826,"cosine":0.8361235123317036,"faithfulness_drop_ratio":0.8483100929478574},
+    "tree_subset_20": {"p95_ms":36.01774215,"top2_overlap":0.9375,"top5_overlap":0.8710000000000001,"cosine":0.9585201047212354,"faithfulness_drop_ratio":1.03665378133954}
+  },
+  "selected": "tree_subset_20",
+  "selection_rationale": "Approximate TreeExplainer was much faster but showed poor top-2 agreement with exact full-forest evidence (21%). The deterministic 20-tree explanation surrogate remained below the 40 ms attribution budget while preserving substantially higher top-2/top-5 overlap, cosine similarity, and full-detector perturbation faithfulness.",
+  "detector_unchanged": true,
+  "threshold_unchanged": true,
+  "test_labels_used_for_selection": false,
+  "interpretation_boundary": "Selection concerns explanation computation only; the frozen 150-tree detector remains authoritative for probability and class."
+}
