@@ -1,0 +1,19 @@
+{
+  "version": "UNSW_EGCP_SHAP_acceleration_validation_v1",
+  "dataset": "UNSW-NB15",
+  "partition": "Validation only",
+  "selection_scope": "runtime/evidence approximation development; no Test labels used",
+  "events_approx": 800,
+  "events_exact_paired": 200,
+  "seed": 20260907,
+  "feature_count": 39,
+  "method_exact": "TreeSHAP exact",
+  "method_candidate": "shap.TreeExplainer approximate=True",
+  "criteria_declared_for_candidate": {"approx_p95_ms_lt":5.0,"top5_overlap_ge":0.6,"cosine_ge":0.75,"paired_drop_ratio_ge":0.5,"wilcoxon_p_lt":0.001},
+  "metrics": {"approx_p50_ms":0.041665499999999994,"approx_p95_ms":0.11037399999999996,"exact_p50_ms":242.502676,"exact_p95_ms":261.01881994999997,"p95_speedup":2364.8578465037062,"top2_overlap_mean":0.21,"top5_overlap_mean":0.826,"cosine_mean":0.8361235123317036,"approx_mean_drop":0.22283443945039502,"random_mean_drop":0.0718681334588953,"wilcoxon_pvalue":3.970155730483208e-117,"exact_mean_drop_paired200":0.2536043745534213,"approx_mean_drop_paired200":0.21513515054939605,"approx_to_exact_drop_ratio":0.8483100929478574},
+  "criteria_pass": {"approx_latency":true,"top5_overlap":true,"cosine":true,"faithfulness_ratio":true,"random_control":true},
+  "candidate_selected_for_confirmatory_test": true,
+  "model_sha256": "d0122bb1501c17d55934b9ed5484b03f03879af8fead19007e6fb428c70d2f05",
+  "software": {"python":"3.12.3","shap":"0.52.0","scipy":"1.15.1"},
+  "interpretation_boundary": "Approximate attribution is an acceleration candidate; it must not be described as exact TreeSHAP."
+}
