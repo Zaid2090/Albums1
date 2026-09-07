@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript and archived software release."
+title: "EGCP External Validation on UNSW-NB15"
+type: software
+version: 1.0.0
+date-released: 2026-09-07
+authors:
+  - family-names: "Alanazi"
+    given-names: "Zaid"
+repository-code: "https://github.com/Zaid2090/EGCP-External-Validation-UNSW-NB15"
+keywords:
+  - network intrusion detection
+  - explainable AI
+  - TreeSHAP
+  - ONNX
+  - UNSW-NB15
+  - evidence governance
+  - latency
+  - TSES-20
+license: MIT
+abstract: >-
+  Reproducibility artifacts for a leakage-controlled independent UNSW-NB15
+  replication of an evidence-governed explainable intrusion-detection protocol,
+  including exact TreeSHAP faithfulness evaluation, ONNX equivalence and latency,
+  and a validation-selected 20-tree explanation surrogate (TSES-20).
