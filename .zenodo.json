@@ -1,0 +1,22 @@
+{
+  "title": "EGCP External Validation on UNSW-NB15",
+  "description": "Reproducibility package for a leakage-controlled independent UNSW-NB15 replication of an evidence-governed explainable network intrusion detection protocol, including exact TreeSHAP faithfulness, ONNX equivalence and latency, strict grounded explanation validation, and the validation-selected TSES-20 explanation surrogate.",
+  "creators": [
+    {
+      "name": "Alanazi, Zaid"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "network intrusion detection",
+    "UNSW-NB15",
+    "TreeSHAP",
+    "ONNX",
+    "explainable AI",
+    "TSES-20",
+    "reproducibility",
+    "low latency"
+  ],
+  "upload_type": "software",
+  "access_right": "open"
+}
