@@ -1,0 +1,23 @@
+{
+  "version": "UNSW_EGCP_tree_subset_surrogate_validation_v1",
+  "dataset": "UNSW-NB15",
+  "partition": "Validation only",
+  "development_history": "20 trees selected after a 50-event Validation pilot over 5,10,15,20,25,30 trees; this robust Validation cohort excludes those 50 pilot events.",
+  "surrogate_role": "explanation only; never used for detector probability, class, threshold, or training",
+  "source_forest_trees": 150,
+  "surrogate_trees": 20,
+  "surrogate_tree_indices": [0,7,15,23,31,39,47,54,62,70,78,86,94,101,109,117,125,133,141,149],
+  "events_surrogate": 800,
+  "events_full_exact_paired": 200,
+  "seed": 20260907,
+  "feature_count": 39,
+  "criteria": {"surrogate_p95_ms_lt":40.0,"top2_overlap_ge":0.75,"top5_overlap_ge":0.8,"cosine_ge":0.9,"paired_drop_ratio_ge":0.75,"wilcoxon_p_lt":0.001},
+  "metrics": {"surrogate_p50_ms":33.2995025,"surrogate_p95_ms":36.01774215,"full_exact_p50_ms":239.47457300000002,"full_exact_p95_ms":252.90270395,"p95_speedup":7.021614594739388,"top2_overlap_mean":0.9375,"top5_overlap_mean":0.8710000000000001,"cosine_mean":0.9585201047212354,"surrogate_mean_drop":0.25606289154413003,"random_mean_drop":0.07035819162398584,"wilcoxon_pvalue":1.1361263221636529e-126,"full_exact_mean_drop_paired200":0.24451494006767938,"surrogate_mean_drop_paired200":0.25347733721517085,"surrogate_to_exact_drop_ratio":1.03665378133954},
+  "criteria_pass": {"latency":true,"top2_overlap":true,"top5_overlap":true,"cosine":true,"faithfulness_ratio":true,"random_control":true},
+  "selected_for_confirmatory_test": true,
+  "source_model_sha256": "d0122bb1501c17d55934b9ed5484b03f03879af8fead19007e6fb428c70d2f05",
+  "surrogate_model_file": "unsw_rf_explainer_surrogate_20trees_v1.joblib",
+  "surrogate_model_sha256": "0d4c2bb1d9007dbdf155b15ecd0726c04af0164446493336ac058155b1f6e6f4",
+  "software": {"python":"3.12.3","shap":"0.52.0","scipy":"1.15.1"},
+  "interpretation_boundary": "The surrogate yields exact TreeSHAP for a deterministic 20-tree subset, not exact attribution for the full 150-tree detector. Fidelity is evaluated against full-detector perturbation and paired full-forest TreeSHAP."
+}
