@@ -1,0 +1,32 @@
+{
+  "version": "UNSW_EGCP_tree_subset_surrogate_confirmatory_test_v1",
+  "dataset": "UNSW-NB15",
+  "status": "confirmatory_after_Test_was_previously_accessed",
+  "no_retraining": true,
+  "no_threshold_change": true,
+  "surrogate_role": "explanation only; frozen 20-tree subset selected on Validation",
+  "source_model_sha256": "d0122bb1501c17d55934b9ed5484b03f03879af8fead19007e6fb428c70d2f05",
+  "onnx_sha256": "ef468176f0ed38c970f58a593826c6d2cc8fd038d51125cedc56044d433327ad",
+  "surrogate_sha256": "0d4c2bb1d9007dbdf155b15ecd0726c04af0164446493336ac058155b1f6e6f4",
+  "feature_count": 39,
+  "threshold": 0.5,
+  "faithfulness": {"events":800,"surrogate_top2_overlap_mean":0.950625,"surrogate_top5_overlap_mean":0.8740000000000001,"surrogate_mean_probability_drop":0.24788717913791644,"exact_full_mean_probability_drop":0.24783820051684774,"random_mean_probability_drop":0.05991424254370691,"surrogate_to_exact_drop_ratio":1.0001976233726946,"wilcoxon_pvalue_surrogate_gt_random":3.2311436778170474e-130,"surrogate_shap_p95_ms_on_800":35.594127050000004},
+  "timing_events": 122,
+  "timing_rounds": 10,
+  "timing_calls": 1220,
+  "quality": {"strict_valid_rate":1.0,"valid_calls":1220,"calls":1220},
+  "latency": {
+    "prepare_ms":{"mean_ms":0.006506082786885245,"p50_ms":0.00628,"p95_ms":0.00833,"p99_ms":0.013687699999999995,"max_ms":0.040322},
+    "detector_ms":{"mean_ms":0.28139602295081967,"p50_ms":0.2768045,"p95_ms":0.3740535,"p99_ms":0.404856,"max_ms":0.449584},
+    "surrogate_shap_ms":{"mean_ms":33.9356393852459,"p50_ms":33.7589805,"p95_ms":36.000981,"p99_ms":38.501075209999996,"max_ms":42.670485},
+    "selection_ms":{"mean_ms":0.033869100819672135,"p50_ms":0.0333015,"p95_ms":0.04336104999999998,"p99_ms":0.05267658999999999,"max_ms":0.068412},
+    "renderer_ms":{"mean_ms":0.013756985245901637,"p50_ms":0.013531,"p95_ms":0.017671,"p99_ms":0.026492499999999992,"max_ms":0.03157},
+    "validator_ms":{"mean_ms":0.062084242622950814,"p50_ms":0.0604575,"p95_ms":0.07493745,"p99_ms":0.08156748999999999,"max_ms":0.200567},
+    "end_to_end_ms":{"mean_ms":34.33325181967213,"p50_ms":34.1614365,"p95_ms":36.4565219,"p99_ms":38.912510999999995,"max_ms":43.228444}
+  },
+  "criteria": {"strict_valid_rate_ge":0.95,"end_to_end_p95_ms_lt":50.0,"top2_overlap_ge":0.75,"top5_overlap_ge":0.8,"surrogate_to_exact_drop_ratio_ge":0.75,"wilcoxon_p_lt":0.001},
+  "criteria_pass": {"strict_validity":true,"latency":true,"top2_overlap":true,"top5_overlap":true,"faithfulness_ratio":true,"random_control":true},
+  "all_confirmatory_targets_passed": true,
+  "runtime": {"python":"3.12.3","numpy":"2.1.3","pandas":"2.2.3","shap":"0.52.0","onnxruntime":"1.29.0","provider":"CPUExecutionProvider","execution_mode":"ORT_SEQUENTIAL","threads":"1/1"},
+  "interpretation_boundary": "Post-flow triggered explanation path using exact TreeSHAP on a frozen 20-tree explanation surrogate. It is not exact full-forest TreeSHAP; packet capture, flow formation, transport, queueing, logging and GenAI fallback are excluded."
+}
