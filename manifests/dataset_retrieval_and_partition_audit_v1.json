@@ -1,0 +1,30 @@
+{
+  "dataset": "UNSW-NB15",
+  "official_dataset_page": "https://research.unsw.edu.au/projects/unsw-nb15-dataset",
+  "retrieval_mirror": "https://github.com/jamshaid120/UNSW_NB15-Complete-dataset",
+  "official_expected_rows": {"train": 175341, "test": 82332},
+  "retrieval_note": "The selected public mirror stores the two predefined partition contents under reversed filenames. Semantic train/test assignment was therefore determined by official published row counts and verified by class distributions. Raw downloads remain unchanged; canonical semantic aliases are stored under data/processed.",
+  "files": {
+    "mirror_training_name": {
+      "path": "/root/Zaid_EGCP_UNSW_External_Validation/data/raw/UNSW_NB15_training-set.csv",
+      "sha256": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+      "rows": 82332,
+      "columns": 45,
+      "label_counts": {"0": 37000, "1": 45332},
+      "attack_cat_counts": {"Normal":37000,"Generic":18871,"Exploits":11132,"Fuzzers":6062,"DoS":4089,"Reconnaissance":3496,"Analysis":677,"Backdoor":583,"Shellcode":378,"Worms":44},
+      "canonical_semantic_partition": "test",
+      "canonical_path": "/root/Zaid_EGCP_UNSW_External_Validation/data/processed/UNSW_NB15_test_official_partition.csv"
+    },
+    "mirror_testing_name": {
+      "path": "/root/Zaid_EGCP_UNSW_External_Validation/data/raw/UNSW_NB15_testing-set.csv",
+      "sha256": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+      "rows": 175341,
+      "columns": 45,
+      "label_counts": {"0": 56000, "1": 119341},
+      "attack_cat_counts": {"Normal":56000,"Generic":40000,"Exploits":33393,"Fuzzers":18184,"DoS":12264,"Reconnaissance":10491,"Analysis":2000,"Backdoor":1746,"Shellcode":1133,"Worms":130},
+      "canonical_semantic_partition": "train",
+      "canonical_path": "/root/Zaid_EGCP_UNSW_External_Validation/data/processed/UNSW_NB15_train_official_partition.csv"
+    }
+  },
+  "assignment": {"test": "mirror_training_name", "train": "mirror_testing_name"}
+}
