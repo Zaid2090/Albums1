@@ -1,0 +1,17 @@
+{
+  "dataset": "UNSW-NB15",
+  "retrieved_shapes": {
+    "semantic_development": [175341, 45],
+    "semantic_official_test": [82332, 45]
+  },
+  "predictors": {"total": 42, "categorical": ["proto", "service", "state"], "numeric_count": 39},
+  "missing_cells": {"development": 0, "official_test": 0},
+  "duplicates_excluding_id": {"development": 67601, "official_test": 26387},
+  "predictor_identical_conflicting_binary_label_groups": 414,
+  "predictor_identical_multi_attack_category_groups": 2445,
+  "cross_official_split_predictor_overlap_groups": 1302,
+  "official_test_rows_purged_for_predictor_overlap": 8541,
+  "strict_final_rows": {"train_dev": 141945, "validation": 33396, "test_purged": 73791},
+  "strict_group_overlap": {"dev_val": 0, "dev_test": 0, "val_test": 0},
+  "categorical_unseen_in_purged_test": {"proto": [], "service": [], "state": ["ACC", "CLO"]}
+}
